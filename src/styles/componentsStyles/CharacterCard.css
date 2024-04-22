@@ -1,0 +1,26 @@
+.CharacterCard {
+  background-image: url("../../assets/Nature-Simpsons.webp");
+  background-position: center;
+  background-size: cover;
+  aspect-ratio: 14 / 16;
+  padding: 0.5em 0em;
+  width: 180px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  border-radius: 1em;
+  cursor: pointer;
+}
+
+.CharacterCard img {
+  height: 100%; /* Fixed height for the images */
+  object-fit: contain;
+}
+
+.CharacterCard p {
+  font-size: 2rem;
+  color: whitesmoke;
+}
