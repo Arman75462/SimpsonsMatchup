@@ -8,7 +8,7 @@ function MainBody() {
     { name: "Agnes Skinner", imageLocation: "/src/assets/Agnes_Skinner.webp" },
     { name: "Apu", imageLocation: "/src/assets/Apu.webp" },
     { name: "Willie", imageLocation: "/src/assets/Willie.webp" },
-    { name: "Smithers", imageLocation: "/src/assets/Smithers.webp" },
+    /* { name: "Smithers", imageLocation: "/src/assets/Smithers.webp" },
     { name: "Skinner", imageLocation: "/src/assets/Seymour_Skinner.webp" },
     { name: "Ralph", imageLocation: "/src/assets/Ralph.webp" },
     { name: "Patty", imageLocation: "/src/assets/Patty.webp" },
@@ -26,7 +26,7 @@ function MainBody() {
     { name: "Chief Wiggum", imageLocation: "/src/assets/Chief_Wiggum.webp" },
     { name: "Mr. Burns", imageLocation: "/src/assets/Burns.webp" },
     { name: "Bob", imageLocation: "/src/assets/Bob.webp" },
-    { name: "Barney", imageLocation: "/src/assets/Barney.webp" },
+    { name: "Barney", imageLocation: "/src/assets/Barney.webp" }, */
   ];
 
   return (

@@ -15,7 +15,7 @@ RESETS=====================
 * {
   margin: 0;
   padding: 0;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
 /* Enable smooth scrolling for same-page links, 
@@ -98,5 +98,5 @@ button {
 }
 
 :root {
-  --pages-padding: 1em 2em;
+  --pages-padding: 1em 5vw;
 }
