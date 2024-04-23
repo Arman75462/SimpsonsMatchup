@@ -9,10 +9,7 @@ function MainBody() {
     { name: "Apu", imageLocation: "/src/assets/Apu.webp" },
     { name: "Willie", imageLocation: "/src/assets/Willie.webp" },
     { name: "Smithers", imageLocation: "/src/assets/Smithers.webp" },
-    {
-      name: "Skinner",
-      imageLocation: "/src/assets/Seymour_Skinner.webp",
-    },
+    { name: "Skinner", imageLocation: "/src/assets/Seymour_Skinner.webp" },
     { name: "Ralph", imageLocation: "/src/assets/Ralph.webp" },
     { name: "Patty", imageLocation: "/src/assets/Patty.webp" },
     { name: "Ned", imageLocation: "/src/assets/Ned.webp" },

@@ -2,4 +2,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: orange;
+  padding: 0.4em 2em;
+}
+
+.Header img {
+  max-width: 250px;
 }

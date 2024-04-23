@@ -3,9 +3,6 @@
 /*============================
 RESETS=====================
 ==============================*/
-* {
-  border: 2px solid red;
-}
 
 /* Ensure consistent box-sizing model */
 *,
@@ -18,6 +15,7 @@ RESETS=====================
 * {
   margin: 0;
   padding: 0;
+  border: 2px solid red;
 }
 
 /* Enable smooth scrolling for same-page links, 

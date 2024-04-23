@@ -9,8 +9,8 @@ function App() {
     <>
       <div className="App">
         <Header />
-        <MainBody />
-        <Footer />
+        {/* <MainBody /> */}
+        {/* <Footer /> */}
       </div>
       <div className="backgroundImage"></div>
     </>
