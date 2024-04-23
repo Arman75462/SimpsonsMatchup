@@ -1,3 +1,9 @@
 .Logo {
   max-width: 250px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.Logo:hover {
+  transform: scale(1.08);
 }
