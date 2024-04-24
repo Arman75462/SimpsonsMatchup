@@ -2,8 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  padding: var(--pages-padding);
+  padding: 2em 5vw;
 }
 
 .Footer__volume-icons {

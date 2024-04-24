@@ -96,7 +96,3 @@ select,
 button {
   cursor: pointer;
 }
-
-:root {
-  --pages-padding: 1em 5vw;
-}

@@ -2,5 +2,5 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--pages-padding);
+  padding: 1em 5vw;
 }
