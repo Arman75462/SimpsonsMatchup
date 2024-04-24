@@ -1,0 +1,14 @@
+.UtilityButton {
+  background-color: white;
+  border-radius: 50%;
+  padding: 0.8em;
+  transition: all 0.2s;
+}
+
+.UtilityButton:hover {
+  transform: scale(1.07);
+}
+
+.UtilityButton img {
+  transform: scale(1.4);
+}

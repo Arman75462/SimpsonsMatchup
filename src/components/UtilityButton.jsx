@@ -1,7 +1,12 @@
 import { useState } from "react";
+import "../styles/componentsStyles/UtilityButton.css";
 
-function UtilityButton() {
-  return <button className="UtilityButton"></button>;
+function UtilityButton({ buttonIcon, alt, onClick }) {
+  return (
+    <button className="UtilityButton" onClick={onClick}>
+      <img src={buttonIcon} alt={alt} />
+    </button>
+  );
 }
 
 export default UtilityButton;

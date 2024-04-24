@@ -10,7 +10,7 @@ function App() {
       <div className="App">
         <Header />
         {<MainBody />}
-        {/* <Footer /> */}
+        <Footer />
       </div>
       <div className="backgroundImage"></div>
     </>

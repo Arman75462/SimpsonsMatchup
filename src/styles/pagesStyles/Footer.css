@@ -2,4 +2,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  padding: var(--pages-padding);
+}
+
+.Footer__volume-icons {
+  display: flex;
+  gap: 0.5em;
 }
