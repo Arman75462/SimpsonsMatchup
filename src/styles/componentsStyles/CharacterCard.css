@@ -2,9 +2,9 @@
   background-image: url("../../assets/Nature-Simpsons.webp");
   background-position: center;
   background-size: cover;
-  aspect-ratio: 14 / 16;
+  aspect-ratio: 14/16;
   padding: 0.5em 0em;
-  width: 180px;
+  width: 215px;
 
   display: flex;
   flex-direction: column;

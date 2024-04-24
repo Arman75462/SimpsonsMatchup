@@ -6,6 +6,7 @@ import volumeOff from "/src/assets/volume_off.svg";
 import musicOn from "/src/assets/music_on.svg";
 import musicOff from "/src/assets/music_off.svg";
 import questionMark from "/src/assets/question_mark.svg";
+import SimpsonsAudio from "/src/assets/SimpsonsAudio.mp3";
 
 function Footer() {
   const [isAudioOn, setIsAudioOn] = useState(false);
@@ -19,6 +20,13 @@ function Footer() {
     setIsMusicPlaying(!isMusicPlaying);
   };
 
+  const audioElement = (
+    <audio autoPlay loop>
+      <source src={SimpsonsAudio} type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  );
+
   return (
     <footer className="Footer">
       <div className="Footer__volume-icons">
@@ -31,6 +39,8 @@ function Footer() {
           onClick={handleClickMusic}
           buttonIcon={isMusicPlaying ? musicOn : musicOff}
         />
+
+        {isMusicPlaying ? audioElement : null}
       </div>
 
       <div>
