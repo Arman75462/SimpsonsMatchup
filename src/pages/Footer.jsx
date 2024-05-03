@@ -1,16 +1,21 @@
 import { useState } from "react";
 import "../styles/pagesStyles/Footer.css";
+
+import InformationCardsContainer from "../components/InformationCardsContainer.jsx";
 import UtilityButton from "../components/UtilityButton.jsx";
-import volumeOn from "/src/assets/volume_on.svg";
-import volumeOff from "/src/assets/volume_off.svg";
-import musicOn from "/src/assets/music_on.svg";
-import musicOff from "/src/assets/music_off.svg";
-import questionMark from "/src/assets/question_mark.svg";
-import SimpsonsAudio from "/src/assets/SimpsonsAudio.mp3";
+import volumeOnIcon from "/src/assets/volume_on.svg";
+import volumeOffIcon from "/src/assets/volume_off.svg";
+import musicOnIcon from "/src/assets/music_on.svg";
+import musicOffIcon from "/src/assets/music_off.svg";
+import questionMarkIcon from "/src/assets/question_mark.svg";
+import closeIcon from "/src/assets/closeIcon.svg";
+import simpsonsMusic from "/src/assets/simpsonsMusic.mp3";
 
 function Footer() {
   const [isAudioOn, setIsAudioOn] = useState(false);
   const [isMusicPlaying, setIsMusicPlaying] = useState(false);
+  const [areInformationCardsShown, setAreInformationCardsShown] =
+    useState(false);
 
   const handleClickVolume = () => {
     setIsAudioOn(!isAudioOn);
@@ -20,9 +25,13 @@ function Footer() {
     setIsMusicPlaying(!isMusicPlaying);
   };
 
+  const handleClickInformationCards = () => {
+    setAreInformationCardsShown(!areInformationCardsShown);
+  };
+
   const audioElement = (
     <audio autoPlay loop>
-      <source src={SimpsonsAudio} type="audio/mpeg" />
+      <source src={simpsonsMusic} type="audio/mpeg" />
       Your browser does not support the audio element.
     </audio>
   );
@@ -32,20 +41,27 @@ function Footer() {
       <div className="Footer__volume-icons">
         <UtilityButton
           onClick={handleClickVolume}
-          buttonIcon={isAudioOn ? volumeOn : volumeOff}
+          buttonIcon={isAudioOn ? volumeOnIcon : volumeOffIcon}
+          alt="Audio icon"
         />
 
         <UtilityButton
           onClick={handleClickMusic}
-          buttonIcon={isMusicPlaying ? musicOn : musicOff}
+          buttonIcon={isMusicPlaying ? musicOnIcon : musicOffIcon}
+          alt="Music note icon"
         />
 
+        {/* Conditional statement to start or stop music */}
         {isMusicPlaying ? audioElement : null}
       </div>
 
-      <div>
-        <UtilityButton buttonIcon={questionMark} />
-      </div>
+      {areInformationCardsShown ? <InformationCardsContainer /> : null}
+
+      <UtilityButton
+        onClick={handleClickInformationCards}
+        buttonIcon={areInformationCardsShown ? closeIcon : questionMarkIcon}
+        alt="Question mark icon"
+      />
     </footer>
   );
 }

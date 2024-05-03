@@ -3,6 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 2em 5vw;
+  position: relative;
 }
 
 .Footer__volume-icons {
