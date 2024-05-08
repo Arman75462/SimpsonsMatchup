@@ -5,8 +5,8 @@
   background-repeat: no-repeat;
   background-size: 70%;
   background-position: center;
-  height: clamp(2.5em, 4vw, 29em);
-  width: clamp(2.5em, 4vw, 29em);
+  height: clamp(3em, 4vw, 29em);
+  width: clamp(3em, 4vw, 29em);
   z-index: 1;
 }
 
