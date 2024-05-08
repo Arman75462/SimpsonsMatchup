@@ -14,7 +14,7 @@ function MainBody() {
       name: "Willie",
       imageLocation: "/src/assets/simpsons-images/Willie.webp",
     },
-    {
+    /* {
       name: "Smithers",
       imageLocation: "/src/assets/simpsons-images/Smithers.webp",
     },
@@ -59,7 +59,7 @@ function MainBody() {
     {
       name: "Barney",
       imageLocation: "/src/assets/simpsons-images/Barney.webp",
-    },
+    }, */
   ];
 
   return (

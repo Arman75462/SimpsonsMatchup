@@ -10,6 +10,7 @@ import musicOffIcon from "/src/assets/icon-images/music_off.svg";
 import questionMarkIcon from "/src/assets/icon-images/question_mark.svg";
 import closeIcon from "/src/assets/icon-images/closeIcon.svg";
 import simpsonsMusic from "/src/assets/audio/simpsonsMusic.mp3";
+import buttonClickSound from "/src/assets/audio/buttonClickSound.mp3";
 
 function Footer() {
   const [isAudioOn, setIsAudioOn] = useState(false);
@@ -18,14 +19,17 @@ function Footer() {
     useState(false);
 
   const handleClickVolume = () => {
+    playButtonClickSound();
     setIsAudioOn(!isAudioOn);
   };
 
   const handleClickMusic = () => {
+    playButtonClickSound();
     setIsMusicPlaying(!isMusicPlaying);
   };
 
   const handleClickInformationCards = () => {
+    playButtonClickSound();
     setAreInformationCardsShown(!areInformationCardsShown);
   };
 
@@ -35,6 +39,14 @@ function Footer() {
       Your browser does not support the audio element.
     </audio>
   );
+
+  const playButtonClickSound = () => {
+    if (isAudioOn) {
+      // Create an audio element and play it
+      const audio = new Audio(buttonClickSound);
+      audio.play();
+    }
+  };
 
   return (
     <footer className="Footer">
