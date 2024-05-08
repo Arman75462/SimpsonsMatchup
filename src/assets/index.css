@@ -96,3 +96,8 @@ select,
 button {
   cursor: pointer;
 }
+
+:root {
+  --utlity-button-background-color: whitesmoke;
+  --general-text-color: #ee3335;
+}

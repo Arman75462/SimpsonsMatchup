@@ -1,11 +1,14 @@
 import { useState } from "react";
 import "../styles/componentsStyles/UtilityButton.css";
 
-function UtilityButton({ buttonIcon, alt, onClick }) {
+function UtilityButton({ buttonIcon, onClick, alt }) {
   return (
-    <button className="UtilityButton" onClick={onClick}>
-      <img src={buttonIcon} alt={alt} />
-    </button>
+    <button
+      className="UtilityButton"
+      onClick={onClick}
+      alt={alt}
+      style={{ backgroundImage: `url(${buttonIcon})` }}
+    ></button>
   );
 }
 

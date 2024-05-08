@@ -1,14 +1,15 @@
 .UtilityButton {
-  background-color: white;
+  background-color: var(--utlity-button-background-color);
+  transition: all 0.3s;
   border-radius: 50%;
-  padding: 0.8em;
-  transition: all 0.2s;
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-position: center;
+  height: clamp(2.5em, 4vw, 29em);
+  width: clamp(2.5em, 4vw, 29em);
+  z-index: 1;
 }
 
 .UtilityButton:hover {
   transform: scale(1.07);
-}
-
-.UtilityButton img {
-  transform: scale(1.4);
 }

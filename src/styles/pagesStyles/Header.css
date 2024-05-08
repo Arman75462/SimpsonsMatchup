@@ -2,5 +2,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em 5vw;
+  gap: 1em;
+  flex-wrap: wrap;
+  padding: max(1.5em, 1%) max(1.5em, 5%);
+}
+
+@media (max-width: 550px) {
+  .Header {
+    justify-content: center;
+  }
 }

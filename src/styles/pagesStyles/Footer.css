@@ -2,11 +2,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2em 5vw;
+  padding: max(1.5em, 2%) max(1.5em, 5%);
   position: relative;
 }
 
 .Footer__volume-icons {
   display: flex;
-  gap: 1em;
+  gap: 2vw;
 }
