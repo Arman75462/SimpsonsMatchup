@@ -64,13 +64,17 @@ function MainBody() {
 
   return (
     <main className="MainBody">
-      {charactersList.map((character) => (
-        <CharacterCard
-          key={character.name}
-          characterImageLocation={character.imageLocation}
-          characterName={character.name}
-        />
-      ))}
+      <div className="MainBody__characters-container">
+        {charactersList.map((character) => (
+          <CharacterCard
+            key={character.name}
+            characterImageLocation={character.imageLocation}
+            characterName={character.name}
+          />
+        ))}
+      </div>
+
+      <p className="MainBody__click-counter">0/5</p>
     </main>
   );
 }
