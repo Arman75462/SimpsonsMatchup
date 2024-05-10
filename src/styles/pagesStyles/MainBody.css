@@ -1,12 +1,12 @@
 .MainBody {
-  padding: max(2em, 2%) max(4em, 10%);
+  padding: max(2em, 2%) max(4em, 7%);
 }
 
 .MainBody__characters-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 4em 5%;
+  gap: 5vh 3%;
 }
 
 .MainBody__click-counter {

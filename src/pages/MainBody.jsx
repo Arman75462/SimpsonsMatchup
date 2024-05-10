@@ -14,11 +14,11 @@ function MainBody() {
       name: "Willie",
       imageLocation: "/src/assets/simpsons-images/Willie.webp",
     },
-    /* {
+    {
       name: "Smithers",
       imageLocation: "/src/assets/simpsons-images/Smithers.webp",
     },
-    {
+    /* {
       name: "Skinner",
       imageLocation: "/src/assets/simpsons-images/Seymour_Skinner.webp",
     },
