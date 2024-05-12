@@ -5,12 +5,14 @@ import Footer from "./pages/Footer.jsx";
 import MainBody from "./pages/MainBody.jsx";
 
 function App() {
+  const [isAudioOn, setIsAudioOn] = useState(true);
+
   return (
     <>
       <div className="App">
-        <Header />
+        <Header isAudioOn={isAudioOn} />
         <MainBody />
-        <Footer />
+        <Footer isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
       </div>
       <div className="backgroundImage"></div>
     </>

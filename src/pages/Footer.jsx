@@ -12,8 +12,7 @@ import closeIcon from "/src/assets/icon-images/closeIcon.svg";
 import simpsonsMusic from "/src/assets/audio/simpsonsMusic.mp3";
 import buttonClickSound from "/src/assets/audio/buttonClickSound.mp3";
 
-function Footer() {
-  const [isAudioOn, setIsAudioOn] = useState(true);
+function Footer({ isAudioOn, setIsAudioOn }) {
   const [isMusicPlaying, setIsMusicPlaying] = useState(false);
   const [areInformationCardsShown, setAreInformationCardsShown] =
     useState(false);

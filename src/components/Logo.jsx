@@ -2,11 +2,13 @@ import { useState } from "react";
 import "../styles/componentsStyles/Logo.css";
 import logoClickSound from "/src/assets/audio/logoClickSound.mp3";
 
-function Logo() {
+function Logo({ isAudioOn }) {
   const handleLogoClick = () => {
-    // Create an audio element and play it
-    const audio = new Audio(logoClickSound);
-    audio.play();
+    if (isAudioOn) {
+      // Create an audio element and play it
+      const audio = new Audio(logoClickSound);
+      audio.play();
+    }
   };
 
   return (

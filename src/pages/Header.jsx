@@ -1,12 +1,12 @@
 import { useState } from "react";
 import "./../styles/pagesStyles/Header.css";
-import SimpsonsLogo from "../components/Logo.jsx";
+import Logo from "../components/Logo.jsx";
 import ScoreBoard from "../components/ScoreBoard.jsx";
 
-function Header() {
+function Header({ isAudioOn }) {
   return (
     <header className="Header">
-      <SimpsonsLogo />
+      <Logo isAudioOn={isAudioOn} />
       <ScoreBoard />
     </header>
   );
