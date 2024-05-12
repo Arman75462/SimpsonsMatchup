@@ -13,7 +13,7 @@ import simpsonsMusic from "/src/assets/audio/simpsonsMusic.mp3";
 import buttonClickSound from "/src/assets/audio/buttonClickSound.mp3";
 
 function Footer() {
-  const [isAudioOn, setIsAudioOn] = useState(false);
+  const [isAudioOn, setIsAudioOn] = useState(true);
   const [isMusicPlaying, setIsMusicPlaying] = useState(false);
   const [areInformationCardsShown, setAreInformationCardsShown] =
     useState(false);
