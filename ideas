@@ -13,11 +13,8 @@ Winning animation:
 
 console.log(
 charactersListNightmareMode /_ 23 characters _/,
-charactersListVeryHardMode /_ 18 characters _/,
-charactersListHardMode /_ 15 characters _/,
-charactersListModerateHardMode /_ 12 characters _/,
-charactersListMediumMode /_ 9 characters _/,
-charactersListModeratelyEasyMode /_ 7 characters _/,
-charactersListEasyMode /_ 5 characters _/,
-charactersListEasiestMode /_ 3 characters _/
+charactersListHardMode /_ 17 characters _/,
+charactersListMediumMode /_ 12 characters _/,
+charactersListEasyMode /_ 7 characters _/,
+charactersListEasiestMode /_ 5 characters _/
 );

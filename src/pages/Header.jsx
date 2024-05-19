@@ -3,10 +3,15 @@ import "./../styles/pagesStyles/Header.css";
 import Logo from "../components/Logo.jsx";
 import ScoreBoard from "../components/ScoreBoard.jsx";
 
-function Header({ isAudioOn }) {
+function Header({ isAudioOn, isMainMenuShowing, setIsMainMenuShowing }) {
   return (
     <header className="Header">
-      <Logo isAudioOn={isAudioOn} />
+      <Logo
+        isAudioOn={isAudioOn}
+        className="LogoHeader"
+        isMainMenuShowing={isMainMenuShowing}
+        setIsMainMenuShowing={setIsMainMenuShowing}
+      />
       <ScoreBoard />
     </header>
   );

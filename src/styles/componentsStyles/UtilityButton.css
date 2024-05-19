@@ -1,5 +1,5 @@
 .UtilityButton {
-  background-color: var(--utlity-button-background-color);
+  background-color: var(--button-background-color);
   transition: all 0.3s;
   border-radius: 50%;
   background-repeat: no-repeat;
@@ -8,8 +8,4 @@
   height: clamp(3em, 4vw, 29em);
   width: clamp(3em, 4vw, 29em);
   z-index: 1;
-}
-
-.UtilityButton:hover {
-  transform: scale(1.07);
 }

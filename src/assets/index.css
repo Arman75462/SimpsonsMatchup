@@ -15,7 +15,7 @@ RESETS=====================
 * {
   margin: 0;
   padding: 0;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
 /* Enable smooth scrolling for same-page links, 
@@ -84,6 +84,16 @@ button {
   color: inherit;
 }
 
+/* Reset focus styles */
+button {
+  outline-color: transparent;
+}
+
+button:is(:hover, :focus) {
+  opacity: 0.7;
+  scale: 1.07;
+}
+
 /* Normalize link styles for a clean slate */
 a {
   text-decoration: none;
@@ -98,6 +108,17 @@ button {
 }
 
 :root {
-  --utlity-button-background-color: whitesmoke;
+  --button-background-color: whitesmoke;
   --general-text-color: #ee3335;
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }

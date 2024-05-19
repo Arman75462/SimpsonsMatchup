@@ -1,10 +1,25 @@
-.Logo {
+/* =============
+LOGO FOR HEADER 
+================ */
+.LogoHeader {
   width: 20%;
   min-width: 250px;
   cursor: pointer;
   transition: all 0.5s;
 }
 
-.Logo:hover {
+.LogoHeader:focus,
+.LogoHeader:hover {
   transform: scale(1.08);
+}
+
+/* ===============
+LOGO FOR MAIN MENU 
+================== */
+.LogoMainMenu {
+  width: max(400px, 40%);
+  cursor: pointer;
+  transition: all 0.5s;
+  margin: 0 auto;
+  padding-inline: 0.5em;
 }
