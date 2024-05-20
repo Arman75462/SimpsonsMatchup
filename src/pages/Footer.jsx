@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../styles/pagesStyles/Footer.css";
 
 import InformationCardsContainer from "../components/InformationCardsContainer.jsx";
@@ -16,6 +16,13 @@ function Footer({ isAudioOn, setIsAudioOn }) {
   const [isMusicPlaying, setIsMusicPlaying] = useState(false);
   const [areInformationCardsShown, setAreInformationCardsShown] =
     useState(false);
+
+  useEffect(() => {
+    document.body.style.overflow = areInformationCardsShown ? "hidden" : "auto";
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [areInformationCardsShown]);
 
   const handleClickVolume = () => {
     playButtonClickSound();

@@ -87,6 +87,8 @@ button {
 /* Reset focus styles */
 button {
   outline-color: transparent;
+  transition: all 300ms;
+  box-shadow: 0.2vw 0.2vw 0.4vw rgba(0, 0, 0, 0.2);
 }
 
 button:is(:hover, :focus) {
@@ -108,7 +110,7 @@ button {
 }
 
 :root {
-  --button-background-color: whitesmoke;
+  --white-background-color: whitesmoke;
   --general-text-color: #ee3335;
 }
 

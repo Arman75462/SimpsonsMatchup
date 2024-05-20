@@ -4,11 +4,8 @@ import CharacterCard from "../components/CharacterCard";
 import data from "/src/assets/charactersList.json";
 
 const charactersListNightmareMode = data.charactersListNightmareMode;
-const charactersListVeryHardMode = data.charactersListVeryHardMode;
 const charactersListHardMode = data.charactersListHardMode;
-const charactersListModerateHardMode = data.charactersListModerateHardMode;
 const charactersListMediumMode = data.charactersListMediumMode;
-const charactersListModeratelyEasyMode = data.charactersListModeratelyEasyMode;
 const charactersListEasyMode = data.charactersListEasyMode;
 const charactersListEasiestMode = data.charactersListEasiestMode;
 

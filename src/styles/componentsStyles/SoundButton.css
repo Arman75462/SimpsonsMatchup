@@ -1,6 +1,5 @@
 .SoundButton {
-  background-color: var(--button-background-color);
-  transition: all 0.3s;
+  background-color: var(--white-background-color);
   border-radius: 50%;
   background-repeat: no-repeat;
   background-size: 70%;

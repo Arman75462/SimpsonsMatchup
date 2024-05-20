@@ -21,15 +21,7 @@ function MainMenu({ isAudioOn }) {
 
       <div className="MainMenu__button-difficulty-container">
         <DifficultyLevelButton
-          difficultyLevel="Nightmare"
-          onClick={playButtonClickSound}
-        />
-        <DifficultyLevelButton
-          difficultyLevel="Hard"
-          onClick={playButtonClickSound}
-        />
-        <DifficultyLevelButton
-          difficultyLevel="Medium"
+          difficultyLevel="Easiest"
           onClick={playButtonClickSound}
         />
         <DifficultyLevelButton
@@ -37,7 +29,15 @@ function MainMenu({ isAudioOn }) {
           onClick={playButtonClickSound}
         />
         <DifficultyLevelButton
-          difficultyLevel="Easiest"
+          difficultyLevel="Medium"
+          onClick={playButtonClickSound}
+        />
+        <DifficultyLevelButton
+          difficultyLevel="Hard"
+          onClick={playButtonClickSound}
+        />
+        <DifficultyLevelButton
+          difficultyLevel="Nightmare"
           onClick={playButtonClickSound}
         />
       </div>

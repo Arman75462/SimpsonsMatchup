@@ -18,3 +18,5 @@ charactersListMediumMode /_ 12 characters _/,
 charactersListEasyMode /_ 7 characters _/,
 charactersListEasiestMode /_ 5 characters _/
 );
+
+

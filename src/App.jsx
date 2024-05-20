@@ -4,6 +4,7 @@ import Header from "./pages/Header.jsx";
 import Footer from "./pages/Footer.jsx";
 import MainBody from "./pages/MainBody.jsx";
 import MainMenu from "./pages/MainMenu.jsx";
+import OutcomeCard from "./components/OutcomeCard.jsx";
 
 function App() {
   const [isAudioOn, setIsAudioOn] = useState(true);
@@ -24,6 +25,8 @@ function App() {
             <MainBody />
           </>
         )}
+
+        {/* <OutcomeCard /> */}
 
         <Footer isAudioOn={isAudioOn} setIsAudioOn={setIsAudioOn} />
       </div>
