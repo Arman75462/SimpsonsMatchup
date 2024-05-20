@@ -1,21 +1,23 @@
 .InformationCard {
   background-color: white;
-  border-radius: 1.5em;
-  padding: 1em;
+  border-radius: max(2em, 2vw);
   box-shadow: 0px 0px 20px 0px black;
-  margin-top: 1em;
+  margin-top: 4vh;
   margin-inline: auto;
   text-align: center;
+  padding: max(0.6em, 1%);
 }
 
 .InformationCard p {
-  font-size: clamp(1rem, 4vw, 2rem);
+  font-size: clamp(1rem, 2vw, 15rem);
   background-color: #000400;
   background-clip: text;
   -webkit-text-stroke-color: transparent;
-  -webkit-text-stroke-width: 4px;
+  -webkit-text-stroke-width: max(0.15em, 0.1vw);
   -webkit-background-clip: text;
   color: var(--general-text-color);
-  padding: 0em 0.15em;
-  letter-spacing: 4px;
+
+  /* Important, so that the whole text is viisble. When screen too big, the text is not fully visible without padding */
+  padding-inline: 0.5em;
+  letter-spacing: 0.15em;
 }

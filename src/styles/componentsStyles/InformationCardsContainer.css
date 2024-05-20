@@ -1,5 +1,5 @@
 .InformationCardsContainer {
-  backdrop-filter: blur(18px); /* Adjust the blur radius as needed */
+  backdrop-filter: blur(max(1vw, 8px)); /* Adjust the blur radius as needed */
   background-color: rgba(
     255,
     255,

@@ -1,6 +1,6 @@
 .ScoreBoard {
   background-color: var(--button-background-color);
-  border-radius: max(0.5em, 5%);
+  border-radius: max(1em, 2vw);
   box-shadow: 0px 0px 20px 0px black;
   padding: 1% 3%;
 }
