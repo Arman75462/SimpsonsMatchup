@@ -1,8 +1,12 @@
 import { useState } from "react";
 import "../styles/componentsStyles/DifficultyLevelButton.css";
 
-function DifficultyLevelButton({ difficultyLevel }) {
-  return <button className="DifficultyLevelButton">{difficultyLevel}</button>;
+function DifficultyLevelButton({ difficultyLevel, onClick }) {
+  return (
+    <button className="DifficultyLevelButton" onClick={onClick}>
+      {difficultyLevel}
+    </button>
+  );
 }
 
 export default DifficultyLevelButton;
