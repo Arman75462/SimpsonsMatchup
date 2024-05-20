@@ -1,6 +1,6 @@
 .MainBody {
   padding: max(2em, 2%) max(4em, 7%);
-  animation: scaleUp 1.5s forwards;
+  animation: scaleUp 0.8s cubic-bezier(0.55, 0.085, 0.68, 0.53);
 }
 
 .MainBody__characters-container {

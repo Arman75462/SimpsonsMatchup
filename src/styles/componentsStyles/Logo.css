@@ -11,6 +11,7 @@ LOGO FOR HEADER
 .LogoHeader:focus,
 .LogoHeader:hover {
   transform: scale(1.08);
+  opacity: 0.7;
 }
 
 /* ===============
@@ -18,8 +19,6 @@ LOGO FOR MAIN MENU
 ================== */
 .LogoMainMenu {
   width: max(400px, 40%);
-  cursor: pointer;
-  transition: all 0.5s;
   margin: 0 auto;
   padding-inline: 0.5em;
 }
