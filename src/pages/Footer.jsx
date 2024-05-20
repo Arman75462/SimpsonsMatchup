@@ -2,7 +2,7 @@ import { useState } from "react";
 import "../styles/pagesStyles/Footer.css";
 
 import InformationCardsContainer from "../components/InformationCardsContainer.jsx";
-import UtilityButton from "../components/UtilityButton.jsx";
+import SoundButton from "../components/SoundButton.jsx";
 import volumeOnIcon from "/src/assets/icon-images/volume_on.svg";
 import volumeOffIcon from "/src/assets/icon-images/volume_off.svg";
 import musicOnIcon from "/src/assets/icon-images/music_on.svg";
@@ -50,13 +50,13 @@ function Footer({ isAudioOn, setIsAudioOn }) {
   return (
     <footer className="Footer">
       <div className="Footer__volume-icons">
-        <UtilityButton
+        <SoundButton
           onClick={handleClickVolume}
           buttonIcon={isAudioOn ? volumeOnIcon : volumeOffIcon}
           alt="Audio icon"
         />
 
-        <UtilityButton
+        <SoundButton
           onClick={handleClickMusic}
           buttonIcon={isMusicPlaying ? musicOnIcon : musicOffIcon}
           alt="Music note icon"
@@ -68,7 +68,7 @@ function Footer({ isAudioOn, setIsAudioOn }) {
 
       {areInformationCardsShown ? <InformationCardsContainer /> : null}
 
-      <UtilityButton
+      <SoundButton
         onClick={handleClickInformationCards}
         buttonIcon={areInformationCardsShown ? closeIcon : questionMarkIcon}
         alt="Question mark icon"
