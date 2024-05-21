@@ -18,6 +18,8 @@ function App() {
   const [isAudioOn, setIsAudioOn] = useState(true);
   const [isMainMenuShowing, setIsMainMenuShowing] = useState(true);
   const [characters, setCharacters] = useState();
+  const [currentScore, setCurrentScore] = useState(0);
+  const [bestScore, setBestScore] = useState(0);
 
   return (
     <>
@@ -35,10 +37,16 @@ function App() {
               isAudioOn={isAudioOn}
               isMainMenuShowing={isMainMenuShowing}
               setIsMainMenuShowing={setIsMainMenuShowing}
+              currentScore={currentScore}
+              bestScore={bestScore}
             />
             <MainBody
               characters={characters}
               setIsMainMenuShowing={setIsMainMenuShowing}
+              currentScore={currentScore}
+              setCurrentScore={setCurrentScore}
+              bestScore={bestScore}
+              setBestScore={setBestScore}
             />
           </>
         )}

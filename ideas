@@ -1,22 +1,11 @@
-SOUNDS:
+DEVELOPPER SIDE TASKS
 
-- Add clicking sounds (whenever you click a button, make it produce a sound)
-- Add music
-- Add buttons to toggle on/off the sounds and music
+- Add comments to your components to understand what they do and how they do it.
+- Refactor code (change components' structure, components' name, folder structure, code reorganization, etc.).
+- Remove unecessary code, especially in CSS.
 
-1- Add game difficulty (like, easy, hard, medium, etc.)
-2- Add a little "?" button so that users can know what the game is about, the rules, etc.
+CLIENT SIDE TASKS
 
-Winning animation:
-
-1-Confetti Animation: Celebrate the player's success with a burst of confetti animation when they complete the game.
-
-console.log(
-charactersListNightmareMode /_ 23 characters _/,
-charactersListHardMode /_ 17 characters _/,
-charactersListMediumMode /_ 12 characters _/,
-charactersListEasyMode /_ 7 characters _/,
-charactersListEasiestMode /_ 5 characters _/
-);
-
-
+- Animation for when user clicks on CharacterCard (like card turning around).
+- Paper sound when clicking on a CharacterCard.
+- Add victorious music when winning and sad music when losing.

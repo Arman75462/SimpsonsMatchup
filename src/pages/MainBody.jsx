@@ -4,7 +4,14 @@ import CharacterCard from "../components/CharacterCard";
 import OutcomeCard from "../components/OutcomeCard.jsx";
 import { shuffleArray } from "/src/utils.js";
 
-function MainBody({ characters, setIsMainMenuShowing }) {
+function MainBody({
+  characters,
+  setIsMainMenuShowing,
+  currentScore,
+  setCurrentScore,
+  bestScore,
+  setBestScore,
+}) {
   const [outcomeStatus, setOutcomeStatus] = useState();
   const [shuffledCharacters, setShuffledCharacters] = useState([]);
 
@@ -12,36 +19,32 @@ function MainBody({ characters, setIsMainMenuShowing }) {
     setShuffledCharacters(shuffleArray(characters));
   }, [characters]);
 
-  useEffect(() => {
-    console.log(shuffledCharacters);
-  }, [shuffledCharacters]);
-
   const handleCardClick = (clickedCharacterName) => {
     setShuffledCharacters((prevCharacters) => {
-      let defeat = false;
-      let victory = false;
-
       const updatedCharacters = prevCharacters.map((character) => {
         if (character.name === clickedCharacterName) {
           if (character.wasClicked) {
-            defeat = true;
+            setOutcomeStatus("Defeat");
+            setCurrentScore(0);
+          } else {
+            const newScore = currentScore + 1;
+            setCurrentScore(newScore);
+            if (newScore > bestScore) {
+              setBestScore(newScore);
+            }
           }
           return { ...character, wasClicked: true };
         }
         return character;
       });
 
-      const clickedCount = updatedCharacters.filter(
+      const newClickedCount = updatedCharacters.filter(
         (character) => character.wasClicked
       ).length;
-      if (clickedCount === characters.length) {
-        victory = true;
-      }
 
-      if (defeat) {
-        setOutcomeStatus("Defeat");
-      } else if (victory) {
+      if (newClickedCount === characters.length && outcomeStatus !== "Defeat") {
         setOutcomeStatus("Victory");
+        setCurrentScore(0);
       }
 
       return shuffleArray(updatedCharacters);
