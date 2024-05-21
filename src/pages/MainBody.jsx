@@ -3,6 +3,8 @@ import "../styles/pagesStyles/MainBody.css";
 import CharacterCard from "../components/CharacterCard";
 import OutcomeCard from "../components/OutcomeCard.jsx";
 import { shuffleArray } from "/src/utils.js";
+import defeatSound from "/src/assets/audio/defeatSound.mp3";
+import victorySound from "/src/assets/audio/victorySound.mp3";
 
 function MainBody({
   characters,
@@ -26,6 +28,10 @@ function MainBody({
           if (character.wasClicked) {
             setOutcomeStatus("Defeat");
             setCurrentScore(0);
+
+            // Create defeat audio and play it
+            const audio = new Audio(defeatSound);
+            audio.play();
           } else {
             const newScore = currentScore + 1;
             setCurrentScore(newScore);
@@ -45,6 +51,10 @@ function MainBody({
       if (newClickedCount === characters.length && outcomeStatus !== "Defeat") {
         setOutcomeStatus("Victory");
         setCurrentScore(0);
+
+        // Create victory audio and play it
+        const audio = new Audio(victorySound);
+        audio.play();
       }
 
       return shuffleArray(updatedCharacters);

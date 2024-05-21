@@ -1,6 +1,7 @@
 .OutcomeCard {
   /* Styling */
   border-radius: max(1em, 2vw);
+  animation: fadeIn 0.8s cubic-bezier(0.55, 0.085, 0.68, 0.53);
 
   /* Image positionning */
   background-size: cover;
@@ -40,4 +41,13 @@
   margin: 0.5em 0;
 
   border: max(2px, 0.15vw) solid black;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

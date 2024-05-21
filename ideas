@@ -8,4 +8,5 @@ CLIENT SIDE TASKS
 
 - Animation for when user clicks on CharacterCard (like card turning around).
 - Paper sound when clicking on a CharacterCard.
-- Add victorious music when winning and sad music when losing.
+- Make cards appear slowly
+- Add restart sound for restart button
