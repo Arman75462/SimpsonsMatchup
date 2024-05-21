@@ -1,9 +1,9 @@
 import { useState } from "react";
 import "../styles/componentsStyles/CharacterCard.css";
 
-function CharacterCard({ characterImageLocation, characterName }) {
+function CharacterCard({ characterImageLocation, characterName, onClick }) {
   return (
-    <div className="CharacterCard">
+    <div className="CharacterCard" onClick={onClick}>
       <img
         src={characterImageLocation}
         alt={`image of ${characterName} in the Simpsons`}

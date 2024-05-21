@@ -4,12 +4,34 @@ import Logo from "../components/Logo.jsx";
 import DifficultyLevelButton from "../components/DifficultyLevelButton.jsx";
 import buttonClickSound from "/src/assets/audio/buttonClickSound.mp3";
 
-function MainMenu({ isAudioOn }) {
+function MainMenu({
+  isAudioOn,
+  setIsMainMenuShowing,
+  setCharacters,
+  charactersLists,
+}) {
   const playButtonClickSound = () => {
     if (isAudioOn) {
       // Create an audio element and play it
       const audio = new Audio(buttonClickSound);
       audio.play();
+    }
+  };
+
+  const handleButtonClick = (difficultyLevel) => {
+    setIsMainMenuShowing(false);
+    playButtonClickSound();
+
+    if (difficultyLevel === "Easiest") {
+      setCharacters(charactersLists.easiestMode);
+    } else if (difficultyLevel === "Easy") {
+      setCharacters(charactersLists.easyMode);
+    } else if (difficultyLevel === "Medium") {
+      setCharacters(charactersLists.mediumMode);
+    } else if (difficultyLevel === "Hard") {
+      setCharacters(charactersLists.hardMode);
+    } else if (difficultyLevel === "Nightmare") {
+      setCharacters(charactersLists.nightmareMode);
     }
   };
 
@@ -22,23 +44,27 @@ function MainMenu({ isAudioOn }) {
       <div className="MainMenu__button-difficulty-container">
         <DifficultyLevelButton
           difficultyLevel="Easiest"
-          onClick={playButtonClickSound}
+          onClick={() => handleButtonClick("Easiest")}
         />
+
         <DifficultyLevelButton
           difficultyLevel="Easy"
-          onClick={playButtonClickSound}
+          onClick={() => handleButtonClick("Easy")}
         />
+
         <DifficultyLevelButton
           difficultyLevel="Medium"
-          onClick={playButtonClickSound}
+          onClick={() => handleButtonClick("Medium")}
         />
+
         <DifficultyLevelButton
           difficultyLevel="Hard"
-          onClick={playButtonClickSound}
+          onClick={() => handleButtonClick("Hard")}
         />
+
         <DifficultyLevelButton
           difficultyLevel="Nightmare"
-          onClick={playButtonClickSound}
+          onClick={() => handleButtonClick("Nightmare")}
         />
       </div>
     </div>

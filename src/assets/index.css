@@ -84,13 +84,13 @@ button {
   color: inherit;
 }
 
-/* Reset focus styles */
 button {
   outline-color: transparent;
   transition: all 300ms;
   box-shadow: 0.2vw 0.2vw 0.4vw rgba(0, 0, 0, 0.2);
 }
 
+/* Reset focus styles */
 button:is(:hover, :focus) {
   opacity: 0.7;
   scale: 1.07;
