@@ -31,6 +31,8 @@ function MainMenu({
       setCharacters(charactersLists.hardMode);
     } else if (difficultyLevel === "Nightmare") {
       setCharacters(charactersLists.nightmareMode);
+    } else if (difficultyLevel === "Impossible") {
+      setCharacters(charactersLists.impossibleMode);
     }
   };
 
@@ -64,6 +66,11 @@ function MainMenu({
         <DifficultyLevelButton
           difficultyLevel="Nightmare"
           onClick={() => handleButtonClick("Nightmare")}
+        />
+
+        <DifficultyLevelButton
+          difficultyLevel="Impossible"
+          onClick={() => handleButtonClick("Impossible")}
         />
       </div>
     </div>

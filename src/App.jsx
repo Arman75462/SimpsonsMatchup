@@ -8,6 +8,7 @@ import data from "/src/assets/charactersList.json";
 
 function App() {
   const charactersLists = {
+    impossibleMode: data.charactersListImpossibleMode,
     nightmareMode: data.charactersListNightmareMode,
     hardMode: data.charactersListHardMode,
     mediumMode: data.charactersListMediumMode,
