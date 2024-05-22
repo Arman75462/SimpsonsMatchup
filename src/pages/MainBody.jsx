@@ -17,12 +17,19 @@ function MainBody({
   setBestScore,
   isAudioOn,
 }) {
-  const [outcomeStatus, setOutcomeStatus] = useState();
+  const [outcomeStatus, setOutcomeStatus] = useState("");
   const [shuffledCharacters, setShuffledCharacters] = useState([]);
 
   useEffect(() => {
     setShuffledCharacters(shuffleArray(characters));
   }, [characters]);
+
+  useEffect(() => {
+    document.body.style.overflow = outcomeStatus ? "hidden" : "auto";
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [outcomeStatus]);
 
   const handleCardClick = (clickedCharacterName) => {
     setShuffledCharacters((prevCharacters) => {
