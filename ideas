@@ -2,11 +2,9 @@ DEVELOPPER SIDE TASKS
 
 - Add comments to your components to understand what they do and how they do it.
 - Refactor code (change components' structure, components' name, folder structure, code reorganization, etc.).
-- Remove unecessary code, especially in CSS.
+- Remove unnecessary code, especially in CSS.
 
 CLIENT SIDE TASKS
 
 - Animation for when user clicks on CharacterCard (like card turning around).
-- Paper sound when clicking on a CharacterCard.
-- Make cards appear slowly
-- Add restart sound for restart button
+- Add impossible difficulty level (with 30 characters)

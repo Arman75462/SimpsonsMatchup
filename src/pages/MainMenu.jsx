@@ -3,6 +3,7 @@ import "../styles/pagesStyles/MainMenu.css";
 import Logo from "../components/Logo.jsx";
 import DifficultyLevelButton from "../components/DifficultyLevelButton.jsx";
 import buttonClickSound from "/src/assets/audio/buttonClickSound.mp3";
+import { playSound } from "/src/utils.js";
 
 function MainMenu({
   isAudioOn,
@@ -12,9 +13,7 @@ function MainMenu({
 }) {
   const playButtonClickSound = () => {
     if (isAudioOn) {
-      // Create an audio element and play it
-      const audio = new Audio(buttonClickSound);
-      audio.play();
+      playSound(buttonClickSound);
     }
   };
 

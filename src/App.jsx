@@ -39,6 +39,7 @@ function App() {
               setIsMainMenuShowing={setIsMainMenuShowing}
               currentScore={currentScore}
               bestScore={bestScore}
+              setCurrentScore={setCurrentScore}
             />
             <MainBody
               characters={characters}
@@ -47,6 +48,7 @@ function App() {
               setCurrentScore={setCurrentScore}
               bestScore={bestScore}
               setBestScore={setBestScore}
+              isAudioOn={isAudioOn}
             />
           </>
         )}

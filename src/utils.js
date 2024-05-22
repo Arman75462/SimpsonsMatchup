@@ -6,3 +6,9 @@ export const shuffleArray = (array) => {
   }
   return shuffledArray;
 };
+
+export const playSound = (sound) => {
+  // Create an audio element and play it
+  const audio = new Audio(sound);
+  audio.play();
+};

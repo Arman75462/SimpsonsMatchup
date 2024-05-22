@@ -1,20 +1,22 @@
 import { useState } from "react";
 import "../styles/componentsStyles/Logo.css";
 import logoClickSound from "/src/assets/audio/logoClickSound.mp3";
+import { playSound } from "/src/utils.js";
 
 function Logo({
   isAudioOn,
   className = "",
   isMainMenuShowing,
   setIsMainMenuShowing,
+  setCurrentScore,
 }) {
   const handleLogoClick = () => {
     if (className === "LogoHeader") {
       setIsMainMenuShowing?.(!isMainMenuShowing);
+      setCurrentScore(0);
+
       if (isAudioOn) {
-        // Create an audio element and play it
-        const audio = new Audio(logoClickSound);
-        audio.play();
+        playSound(logoClickSound);
       }
     }
   };

@@ -9,6 +9,7 @@ function Header({
   setIsMainMenuShowing,
   currentScore,
   bestScore,
+  setCurrentScore,
 }) {
   return (
     <header className="Header">
@@ -17,6 +18,7 @@ function Header({
         className="LogoHeader"
         isMainMenuShowing={isMainMenuShowing}
         setIsMainMenuShowing={setIsMainMenuShowing}
+        setCurrentScore={setCurrentScore}
       />
       <ScoreBoard currentScore={currentScore} bestScore={bestScore} />
     </header>

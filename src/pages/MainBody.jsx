@@ -3,8 +3,10 @@ import "../styles/pagesStyles/MainBody.css";
 import CharacterCard from "../components/CharacterCard";
 import OutcomeCard from "../components/OutcomeCard.jsx";
 import { shuffleArray } from "/src/utils.js";
+import { playSound } from "/src/utils.js";
 import defeatSound from "/src/assets/audio/defeatSound.mp3";
 import victorySound from "/src/assets/audio/victorySound.mp3";
+import CharacterCardFlipSound from "/src/assets/audio/CharacterCardFlipSound.mp3";
 
 function MainBody({
   characters,
@@ -13,6 +15,7 @@ function MainBody({
   setCurrentScore,
   bestScore,
   setBestScore,
+  isAudioOn,
 }) {
   const [outcomeStatus, setOutcomeStatus] = useState();
   const [shuffledCharacters, setShuffledCharacters] = useState([]);
@@ -29,11 +32,15 @@ function MainBody({
             setOutcomeStatus("Defeat");
             setCurrentScore(0);
 
-            // Create defeat audio and play it
-            const audio = new Audio(defeatSound);
-            audio.play();
+            if (isAudioOn) {
+              playSound(defeatSound);
+            }
           } else {
             const newScore = currentScore + 1;
+            if (isAudioOn) {
+              playSound(CharacterCardFlipSound);
+            }
+
             setCurrentScore(newScore);
             if (newScore > bestScore) {
               setBestScore(newScore);
@@ -52,9 +59,9 @@ function MainBody({
         setOutcomeStatus("Victory");
         setCurrentScore(0);
 
-        // Create victory audio and play it
-        const audio = new Audio(victorySound);
-        audio.play();
+        if (isAudioOn) {
+          playSound(victorySound);
+        }
       }
 
       return shuffleArray(updatedCharacters);
@@ -72,6 +79,7 @@ function MainBody({
           outcomeStatus={outcomeStatus}
           setOutcomeStatus={setOutcomeStatus}
           setIsMainMenuShowing={setIsMainMenuShowing}
+          isAudioOn={isAudioOn}
         />
       ) : null}
 

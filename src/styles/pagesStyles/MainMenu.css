@@ -18,5 +18,5 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: max(0.5em, 1vw);
+  gap: max(0.75em, 1vw);
 }
