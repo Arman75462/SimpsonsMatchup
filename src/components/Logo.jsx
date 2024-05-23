@@ -1,5 +1,6 @@
 import "../styles/componentsStyles/Logo.css";
-import logoClickSound from "/public/assets/audio/logoClickSound.mp3";
+import logoClickSound from "/src/assets/audio/logoClickSound.mp3";
+import simpsonsLogo from "/src/assets/simpsons-images/The_Simpsons_Logo.webp";
 import { playSound } from "/src/utils.js";
 
 function Logo({
@@ -23,7 +24,7 @@ function Logo({
   return (
     <>
       <img
-        src="/public/assets/simpsons-images/The_Simpsons_Logo.webp"
+        src={simpsonsLogo}
         className={className}
         alt="The Simpsons animated sitcom logo"
         onClick={handleLogoClick}

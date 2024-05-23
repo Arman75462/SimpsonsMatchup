@@ -1,7 +1,7 @@
 import "../styles/pagesStyles/MainMenu.css";
 import Logo from "../components/Logo.jsx";
 import DifficultyLevelButton from "../components/DifficultyLevelButton.jsx";
-import buttonClickSound from "/public/assets/audio/buttonClickSound.mp3";
+import buttonClickSound from "/src/assets/audio/buttonClickSound.mp3";
 import { playSound } from "/src/utils.js";
 
 function MainMenu({
