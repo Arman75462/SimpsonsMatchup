@@ -1,12 +1,18 @@
 import "../styles/componentsStyles/UtilityButton.css";
 
 function UtilityButton({ buttonIcon, onClick, alt }) {
+  function backgroundImageIcon() {
+    return {
+      backgroundImage: `url(${buttonIcon})`,
+    };
+  }
+
   return (
     <button
       className="UtilityButton"
       onClick={onClick}
       alt={alt}
-      style={{ backgroundImage: `url(${buttonIcon})` }}
+      style={backgroundImageIcon()}
     ></button>
   );
 }
