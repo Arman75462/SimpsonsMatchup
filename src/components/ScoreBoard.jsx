@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "../styles/componentsStyles/ScoreBoard.css";
 
 function ScoreBoard({ currentScore, bestScore }) {

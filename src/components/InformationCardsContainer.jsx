@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "../styles/componentsStyles/InformationCardsContainer.css";
 import InformationCard from "../components/InformationCard.jsx";
 

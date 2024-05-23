@@ -8,5 +8,5 @@
 
 .Footer__volume-icons {
   display: flex;
-  gap: 2vw;
+  gap: max(1em, 2vw);
 }

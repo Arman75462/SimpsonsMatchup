@@ -11,7 +11,5 @@
   background-position: center;
   position: fixed;
   inset: 0;
-  opacity: 0.8;
-  filter: grayscale(35%);
   z-index: -1;
 }

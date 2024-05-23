@@ -1,7 +1,15 @@
 .DifficultyLevelButton {
-  background-color: var(--white-background-color);
-  border-radius: max(0.5em, 5%);
-  padding: 0.8em 1.7em;
-  font-size: clamp(1rem, 1.3vw, 25rem);
+  border-radius: max(0.5em, 1.25vw);
   flex: 0 1 18%; /* flex-grow, flex-shrink, flex-basis */
+  background-color: var(--white-background-color);
+}
+
+.DifficultyLevelButton p {
+  background-color: #000400;
+  background-clip: text;
+  -webkit-text-stroke-color: transparent;
+  -webkit-text-stroke-width: max(0.2em, 0.4vw);
+  -webkit-background-clip: text;
+  padding: 0.25em 1em;
+  font-size: clamp(1.2em, 1.6vw, 30rem);
 }

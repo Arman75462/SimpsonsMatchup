@@ -7,3 +7,4 @@ DEVELOPPER SIDE TASKS
 CLIENT SIDE TASKS
 
 - Animation for when user clicks on CharacterCard (like card turning around).
+- Change SoundButton component name (because the question mark button is not a sound button)

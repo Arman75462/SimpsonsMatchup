@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "../styles/componentsStyles/CharacterCard.css";
 
 function CharacterCard({ characterImageLocation, characterName, onClick }) {

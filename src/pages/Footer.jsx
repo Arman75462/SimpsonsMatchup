@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import "../styles/pagesStyles/Footer.css";
 
 import InformationCardsContainer from "../components/InformationCardsContainer.jsx";
-import SoundButton from "../components/SoundButton.jsx";
+import UtilityButton from "../components/UtilityButton.jsx";
 import volumeOnIcon from "/src/assets/icon-images/volume_on.svg";
 import volumeOffIcon from "/src/assets/icon-images/volume_off.svg";
 import musicOnIcon from "/src/assets/icon-images/music_on.svg";
@@ -14,10 +14,14 @@ import buttonClickSound from "/src/assets/audio/buttonClickSound.mp3";
 import { playSound } from "/src/utils.js";
 
 function Footer({ isAudioOn, setIsAudioOn }) {
+  // State to manage whether background music is playing or not.
   const [isMusicPlaying, setIsMusicPlaying] = useState(false);
+
+  // State to manage the visibility of the information cards.
   const [areInformationCardsShown, setAreInformationCardsShown] =
     useState(false);
 
+  // Disable scrolling when InformationCardsContainer is visible
   useEffect(() => {
     document.body.style.overflow = areInformationCardsShown ? "hidden" : "auto";
     return () => {
@@ -25,27 +29,31 @@ function Footer({ isAudioOn, setIsAudioOn }) {
     };
   }, [areInformationCardsShown]);
 
+  // Handler for toggling all of the audios on and off except for the simpsons music.
   const handleClickVolume = () => {
     if (isAudioOn) {
-      playSound(buttonClickSound);
+      playSound(buttonClickSound); // Play click sound if isAudioOn state is true.
     }
-    setIsAudioOn(!isAudioOn);
+    setIsAudioOn(!isAudioOn); // Toggle audio state.
   };
 
+  // Handler for toggling the simpsons music on and off.
   const handleClickMusic = () => {
     if (isAudioOn) {
-      playSound(buttonClickSound);
+      playSound(buttonClickSound); // Play click sound if isAudioOn state is true.
     }
-    setIsMusicPlaying(!isMusicPlaying);
+    setIsMusicPlaying(!isMusicPlaying); // Toggle music state.
   };
 
+  // Handler for showing or hiding the information cards.
   const handleClickInformationCards = () => {
     if (isAudioOn) {
-      playSound(buttonClickSound);
+      playSound(buttonClickSound); // Play click sound if isAudioOn state is true.
     }
-    setAreInformationCardsShown(!areInformationCardsShown);
+    setAreInformationCardsShown(!areInformationCardsShown); // Toggle information cards visibility.
   };
 
+  // Audio element to play simpsons music when isMusicPlaying state is true.
   const audioElement = (
     <audio autoPlay loop>
       <source src={simpsonsMusic} type="audio/mpeg" />
@@ -56,25 +64,29 @@ function Footer({ isAudioOn, setIsAudioOn }) {
   return (
     <footer className="Footer">
       <div className="Footer__volume-icons">
-        <SoundButton
+        {/* Button to toggle all audio except the simpsons music on and off */}
+        <UtilityButton
           onClick={handleClickVolume}
           buttonIcon={isAudioOn ? volumeOnIcon : volumeOffIcon}
           alt="Audio icon"
         />
 
-        <SoundButton
+        {/* Button to toggle simpsons music on and off */}
+        <UtilityButton
           onClick={handleClickMusic}
           buttonIcon={isMusicPlaying ? musicOnIcon : musicOffIcon}
           alt="Music note icon"
         />
 
-        {/* Conditional statement to start or stop music */}
+        {/* Conditional rendering to play simpsons music by placing audio element here if isMusicPlaying is true */}
         {isMusicPlaying ? audioElement : null}
       </div>
 
+      {/* Conditional rendering to show information cards if areInformationCardsShown is true */}
       {areInformationCardsShown ? <InformationCardsContainer /> : null}
 
-      <SoundButton
+      {/* Button to toggle the visibility of the information cards */}
+      <UtilityButton
         onClick={handleClickInformationCards}
         buttonIcon={areInformationCardsShown ? closeIcon : questionMarkIcon}
         alt="Question mark icon"

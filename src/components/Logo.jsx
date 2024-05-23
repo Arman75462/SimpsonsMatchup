@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "../styles/componentsStyles/Logo.css";
 import logoClickSound from "/src/assets/audio/logoClickSound.mp3";
 import { playSound } from "/src/utils.js";

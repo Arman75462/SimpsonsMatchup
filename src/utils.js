@@ -1,3 +1,4 @@
+// Randomize (shuffle) the order of elements in an array by passing the array as shuffleArray's argument
 export const shuffleArray = (array) => {
   let shuffledArray = array.slice();
   for (let i = shuffledArray.length - 1; i > 0; i--) {
@@ -7,8 +8,8 @@ export const shuffleArray = (array) => {
   return shuffledArray;
 };
 
+// Create an audio element and play it by passing the mp3 file as playSound's argument
 export const playSound = (sound) => {
-  // Create an audio element and play it
   const audio = new Audio(sound);
   audio.play();
 };

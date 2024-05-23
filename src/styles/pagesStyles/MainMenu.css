@@ -10,7 +10,7 @@
 .MainMenu p {
   font-size: clamp(2.5rem, 4vw, 90rem);
   color: black;
-  margin: 0.8em 0em;
+  margin: 0.5em 0em;
   margin-inline: auto;
 }
 
@@ -19,4 +19,5 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: max(0.75em, 1vw);
+  padding-inline: max(0.5em, 1vw);
 }

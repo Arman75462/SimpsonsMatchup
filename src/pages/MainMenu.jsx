@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "../styles/pagesStyles/MainMenu.css";
 import Logo from "../components/Logo.jsx";
 import DifficultyLevelButton from "../components/DifficultyLevelButton.jsx";
@@ -46,31 +45,32 @@ function MainMenu({
         <DifficultyLevelButton
           difficultyLevel="Easiest"
           onClick={() => handleButtonClick("Easiest")}
+          levelColor="#81e9f7"
         />
-
         <DifficultyLevelButton
           difficultyLevel="Easy"
           onClick={() => handleButtonClick("Easy")}
+          levelColor="#46e346"
         />
-
         <DifficultyLevelButton
           difficultyLevel="Medium"
           onClick={() => handleButtonClick("Medium")}
+          levelColor="#daa520"
         />
-
         <DifficultyLevelButton
           difficultyLevel="Hard"
           onClick={() => handleButtonClick("Hard")}
+          levelColor="#ed581c"
         />
-
         <DifficultyLevelButton
           difficultyLevel="Nightmare"
           onClick={() => handleButtonClick("Nightmare")}
+          levelColor="#d60b0b"
         />
-
         <DifficultyLevelButton
           difficultyLevel="Impossible"
           onClick={() => handleButtonClick("Impossible")}
+          levelColor="#9400d3"
         />
       </div>
     </div>

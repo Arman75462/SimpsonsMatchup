@@ -15,7 +15,6 @@ RESETS=====================
 * {
   margin: 0;
   padding: 0;
-  /* border: 2px solid red; */
 }
 
 /* Enable smooth scrolling for same-page links, 
@@ -121,6 +120,15 @@ button {
   }
   to {
     transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
     opacity: 1;
   }
 }

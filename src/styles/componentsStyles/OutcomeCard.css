@@ -42,12 +42,3 @@
 
   border: max(2px, 0.15vw) solid black;
 }
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}

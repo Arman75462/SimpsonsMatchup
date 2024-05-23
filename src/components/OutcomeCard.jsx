@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "../styles/componentsStyles/OutcomeCard.css";
 import DefeatImage from "/src/assets/simpsons-images/DefeatImage.webp";
 import VictoryImage from "/src/assets/simpsons-images/VictoryImage.webp";
