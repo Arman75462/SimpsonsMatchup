@@ -5,9 +5,9 @@ import CharacterCard from "../components/CharacterCard";
 import OutcomeCard from "../components/OutcomeCard.jsx";
 import { shuffleArray } from "/src/utils.js";
 import { playSound } from "/src/utils.js";
-import defeatSound from "/src/assets/audio/defeatSound.mp3";
-import victorySound from "/src/assets/audio/victorySound.mp3";
-import CharacterCardFlipSound from "/src/assets/audio/CharacterCardFlipSound.mp3";
+import defeatSound from "/public/assets/audio/defeatSound.mp3";
+import victorySound from "/public/assets/audio/victorySound.mp3";
+import CharacterCardFlipSound from "/public/assets/audio/CharacterCardFlipSound.mp3";
 
 function MainBody({
   characters,

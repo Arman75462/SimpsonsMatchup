@@ -3,14 +3,14 @@ import "../styles/pagesStyles/Footer.css";
 
 import InformationCardsContainer from "../components/InformationCardsContainer.jsx";
 import UtilityButton from "../components/UtilityButton.jsx";
-import volumeOnIcon from "/src/assets/icon-images/volume_on.svg";
-import volumeOffIcon from "/src/assets/icon-images/volume_off.svg";
-import musicOnIcon from "/src/assets/icon-images/music_on.svg";
-import musicOffIcon from "/src/assets/icon-images/music_off.svg";
-import questionMarkIcon from "/src/assets/icon-images/question_mark.svg";
-import closeIcon from "/src/assets/icon-images/closeIcon.svg";
-import simpsonsMusic from "/src/assets/audio/simpsonsMusic.mp3";
-import buttonClickSound from "/src/assets/audio/buttonClickSound.mp3";
+import volumeOnIcon from "/public/assets/icon-images/volume_on.svg";
+import volumeOffIcon from "/public/assets/icon-images/volume_off.svg";
+import musicOnIcon from "/public/assets/icon-images/music_on.svg";
+import musicOffIcon from "/public/assets/icon-images/music_off.svg";
+import questionMarkIcon from "/public/assets/icon-images/question_mark.svg";
+import closeIcon from "/public/assets/icon-images/closeIcon.svg";
+import simpsonsMusic from "/public/assets/audio/simpsonsMusic.mp3";
+import buttonClickSound from "/public/assets/audio/buttonClickSound.mp3";
 import { playSound } from "/src/utils.js";
 
 function Footer({ isAudioOn, setIsAudioOn }) {

@@ -6,7 +6,7 @@
 }
 
 .backgroundImage {
-  background-image: url("./assets/simpsons-images/SimpsonsFamily.webp");
+  background-image: url("/public/assets/simpsons-images/SimpsonsFamily.webp");
   background-size: cover;
   background-position: center;
   position: fixed;

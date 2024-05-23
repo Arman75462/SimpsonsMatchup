@@ -4,7 +4,7 @@ import Header from "./pages/Header.jsx";
 import Footer from "./pages/Footer.jsx";
 import MainBody from "./pages/MainBody.jsx";
 import MainMenu from "./pages/MainMenu.jsx";
-import data from "/src/assets/charactersList.json";
+import data from "/public/assets/charactersList.json";
 
 function App() {
   // Object containing lists of characters categorized by difficulty levels. Fetched from charactersList.json

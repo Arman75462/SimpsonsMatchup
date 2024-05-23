@@ -1,7 +1,7 @@
 import "../styles/componentsStyles/OutcomeCard.css";
-import DefeatImage from "/src/assets/simpsons-images/DefeatImage.webp";
-import VictoryImage from "/src/assets/simpsons-images/VictoryImage.webp";
-import logoClickSound from "/src/assets/audio/logoClickSound.mp3";
+import DefeatImage from "/public/assets/simpsons-images/DefeatImage.webp";
+import VictoryImage from "/public/assets/simpsons-images/VictoryImage.webp";
+import logoClickSound from "/public/assets/audio/logoClickSound.mp3";
 import { playSound } from "/src/utils.js";
 
 function OutcomeCard({
