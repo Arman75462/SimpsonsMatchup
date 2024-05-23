@@ -37,7 +37,7 @@ function MainBody({
   }, [outcomeStatus]);
 
   const handleDefeat = () => {
-    () => setCurrentScore(0);
+    setCurrentScore(0);
     setOutcomeStatus("Defeat");
 
     if (isAudioOn) {
@@ -46,7 +46,7 @@ function MainBody({
   };
 
   const handleVictory = () => {
-    () => setCurrentScore(0);
+    setCurrentScore(0);
     setOutcomeStatus("Victory");
 
     if (isAudioOn) {
@@ -56,11 +56,11 @@ function MainBody({
 
   const updateScores = (newScore) => {
     // Update the current score state with the new score
-    () => setCurrentScore(newScore);
+    setCurrentScore(newScore);
 
     // If the new score is higher than the best score, update the best score state
     if (newScore > bestScore) {
-      () => setBestScore(newScore);
+      setBestScore(newScore);
     }
 
     if (isAudioOn) {
