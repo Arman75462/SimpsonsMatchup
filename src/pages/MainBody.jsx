@@ -8,6 +8,8 @@ import { playSound } from "/src/utils.js";
 import defeatSound from "/src/assets/audio/defeatSound.mp3";
 import victorySound from "/src/assets/audio/victorySound.mp3";
 import CharacterCardFlipSound from "/src/assets/audio/CharacterCardFlipSound.mp3";
+import logoClickSound from "/src/assets/audio/logoClickSound.mp3";
+import buttonClickSound from "/src/assets/audio/buttonClickSound.mp3";
 
 function MainBody({
   characters,
@@ -36,25 +38,25 @@ function MainBody({
     };
   }, [outcomeStatus]);
 
-  const handleDefeat = () => {
+  function handleDefeat() {
     setCurrentScore(0);
     setOutcomeStatus("Defeat");
 
     if (isAudioOn) {
       playSound(defeatSound);
     }
-  };
+  }
 
-  const handleVictory = () => {
+  function handleVictory() {
     setCurrentScore(0);
     setOutcomeStatus("Victory");
 
     if (isAudioOn) {
       playSound(victorySound);
     }
-  };
+  }
 
-  const updateScores = (newScore) => {
+  function updateScores(newScore) {
     // Update the current score state with the new score
     setCurrentScore(newScore);
 
@@ -66,15 +68,15 @@ function MainBody({
     if (isAudioOn) {
       playSound(CharacterCardFlipSound);
     }
-  };
+  }
 
   // Update the status of a character to indicate it has been clicked
-  const updateCharacterStatus = (character, wasClicked) => {
+  function updateCharacterStatus(character, wasClicked) {
     return { ...character, wasClicked };
-  };
+  }
 
   // Get the updated list of characters after a character has been clicked
-  const getUpdatedCharacters = (prevCharacters, clickedCharacterName) => {
+  function getUpdatedCharacters(prevCharacters, clickedCharacterName) {
     // Iterate through the previous list of characters
     return prevCharacters.map((character) => {
       // Check if the current character is the one that was clicked
@@ -94,9 +96,9 @@ function MainBody({
       // If the character is not the one that was clicked, return it unchanged
       return character;
     });
-  };
+  }
 
-  const handleCardClick = (clickedCharacterName) => {
+  function handleCardClick(clickedCharacterName) {
     // Update the shuffled characters state with a new array based on the previous state
     setShuffledCharacters((prevCharacters) => {
       // Get the updated list of characters after processing the click event
@@ -118,7 +120,28 @@ function MainBody({
       // Shuffle the updated characters array to randomize the order and return it to update the state
       return shuffleArray(updatedCharacters);
     });
-  };
+  }
+
+  function handleRestart() {
+    setOutcomeStatus("");
+    setShuffledCharacters(
+      shuffleArray(characters.map((char) => ({ ...char, wasClicked: false })))
+    );
+    setCurrentScore(0);
+
+    if (isAudioOn) {
+      playSound(buttonClickSound);
+    }
+  }
+
+  function handleBackToMainMenu() {
+    setOutcomeStatus("");
+    setIsMainMenuShowing(true);
+
+    if (isAudioOn) {
+      playSound(logoClickSound);
+    }
+  }
 
   // Count the number of clicked characters
   const clickedCount = shuffledCharacters.filter(
@@ -130,9 +153,8 @@ function MainBody({
       {outcomeStatus === "Victory" || outcomeStatus === "Defeat" ? (
         <OutcomeCard
           outcomeStatus={outcomeStatus}
-          setOutcomeStatus={setOutcomeStatus}
-          setIsMainMenuShowing={setIsMainMenuShowing}
-          isAudioOn={isAudioOn}
+          handleBackToMainMenu={handleBackToMainMenu}
+          handleRestart={handleRestart}
         />
       ) : null}
 

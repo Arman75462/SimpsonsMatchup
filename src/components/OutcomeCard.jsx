@@ -1,24 +1,8 @@
 import "../styles/componentsStyles/OutcomeCard.css";
 import DefeatImage from "/src/assets/simpsons-images/DefeatImage.webp";
 import VictoryImage from "/src/assets/simpsons-images/VictoryImage.webp";
-import logoClickSound from "/src/assets/audio/logoClickSound.mp3";
-import { playSound } from "/src/utils.js";
 
-function OutcomeCard({
-  outcomeStatus,
-  setOutcomeStatus,
-  setIsMainMenuShowing,
-  isAudioOn,
-}) {
-  function handleRestartButtonClick() {
-    setOutcomeStatus("");
-    setIsMainMenuShowing(true);
-
-    if (isAudioOn) {
-      playSound(logoClickSound);
-    }
-  }
-
+function OutcomeCard({ outcomeStatus, handleRestart, handleBackToMainMenu }) {
   function OutcomeCardStyling() {
     if (outcomeStatus === "Victory") {
       return {
@@ -36,11 +20,11 @@ function OutcomeCard({
   function OutcomeCardResultStyling() {
     if (outcomeStatus === "Victory") {
       return {
-        backgroundColor: "#57A0FF",
+        color: "#57A0FF",
       };
     } else if (outcomeStatus === "Defeat") {
       return {
-        backgroundColor: "#F23131",
+        color: "#F23131",
       };
     }
   }
@@ -51,12 +35,21 @@ function OutcomeCard({
         <p className="OutcomeCard__result" style={OutcomeCardResultStyling()}>
           {outcomeStatus}
         </p>
-        <button
-          className="OutcomeCard__restart-button"
-          onClick={handleRestartButtonClick}
-        >
-          Restart
-        </button>
+        {/* Flex container */}
+        <div className="OutcomeCard__button-flex-container">
+          <button
+            className="OutcomeCard__restart-button"
+            onClick={handleRestart}
+          >
+            Restart
+          </button>
+          <button
+            className="OutcomeCard__back-to-main-menu-button"
+            onClick={handleBackToMainMenu}
+          >
+            Main Menu
+          </button>
+        </div>
       </div>
     </div>
   );
