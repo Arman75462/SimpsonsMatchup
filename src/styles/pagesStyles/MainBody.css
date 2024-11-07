@@ -1,13 +1,13 @@
 .MainBody {
   padding: max(2em, 2%) max(4em, 7%);
-  animation: scaleUp 0.8s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  animation: scaleUp 0.7s cubic-bezier(0.55, 0.085, 0.68, 0.53);
 }
 
 .MainBody__characters-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 5vh 3%;
+  gap: 5vh 5%;
 }
 
 .MainBody__click-counter {

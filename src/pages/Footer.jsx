@@ -30,28 +30,28 @@ function Footer({ isAudioOn, setIsAudioOn }) {
   }, [areInformationCardsShown]);
 
   // Handler for toggling all of the audios on and off except for the simpsons music.
-  const handleClickVolume = () => {
+  function handleClickVolume() {
     if (isAudioOn) {
       playSound(buttonClickSound); // Play click sound if isAudioOn state is true.
     }
     setIsAudioOn(!isAudioOn); // Toggle audio state.
-  };
+  }
 
   // Handler for toggling the simpsons music on and off.
-  const handleClickMusic = () => {
+  function handleClickMusic() {
     if (isAudioOn) {
       playSound(buttonClickSound); // Play click sound if isAudioOn state is true.
     }
     setIsMusicPlaying(!isMusicPlaying); // Toggle music state.
-  };
+  }
 
   // Handler for showing or hiding the information cards.
-  const handleClickInformationCards = () => {
+  function handleClickInformationCards() {
     if (isAudioOn) {
       playSound(buttonClickSound); // Play click sound if isAudioOn state is true.
     }
     setAreInformationCardsShown(!areInformationCardsShown); // Toggle information cards visibility.
-  };
+  }
 
   // Audio element to play simpsons music when isMusicPlaying state is true.
   const audioElement = (

@@ -24,7 +24,7 @@ function App() {
   const [isMainMenuShowing, setIsMainMenuShowing] = useState(true);
 
   // State to determine which characters to display based on the selected difficulty level.
-  const [characters, setCharacters] = useState();
+  const [characters, setCharacters] = useState([]);
 
   // State to track the current score displayed in the scoreBoard component.
   const [currentScore, setCurrentScore] = useState(0);

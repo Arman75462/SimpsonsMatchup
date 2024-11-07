@@ -15,12 +15,13 @@
   border-radius: 5%;
   cursor: pointer;
   box-shadow: 1vw 1vw 2vw 0px black;
-  transition: all 0.3s;
+  transition: all 0.3s; /* For hover */
+  animation: fadeIn 1s ease-in-out;
 }
 
 .CharacterCard:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 0 3px whitesmoke; /* Change border color on hover */
+  box-shadow: 0 0 0 0.2vw whitesmoke; /* Change border color on hover */
 }
 
 .CharacterCard img {

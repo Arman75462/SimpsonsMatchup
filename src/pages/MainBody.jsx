@@ -125,7 +125,9 @@ function MainBody({
   function handleRestart() {
     setOutcomeStatus("");
     setShuffledCharacters(
-      shuffleArray(characters.map((char) => ({ ...char, wasClicked: false })))
+      shuffleArray(
+        characters.map((character) => ({ ...character, wasClicked: false }))
+      )
     );
     setCurrentScore(0);
 
@@ -162,7 +164,7 @@ function MainBody({
         <div className="MainBody__characters-container">
           {shuffledCharacters.map((character) => (
             <CharacterCard
-              key={character.name}
+              key={character.id}
               characterImageLocation={character.imageLocation}
               characterName={character.name}
               onClick={() => {

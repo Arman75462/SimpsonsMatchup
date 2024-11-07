@@ -33,57 +33,77 @@ import ProfFrink from "/src/assets/simpsons-images/profFrink.webp";
 
 // Character lists
 const charactersListEasiestMode = [
-  { name: "Bart", imageLocation: Bart, wasClicked: false },
-  { name: "Agnes Skinner", imageLocation: AgnesSkinner, wasClicked: false },
-  { name: "Apu", imageLocation: Apu, wasClicked: false },
-  { name: "Willie", imageLocation: Willie, wasClicked: false },
-  { name: "Smithers", imageLocation: Smithers, wasClicked: false },
+  { name: "Bart", imageLocation: Bart, wasClicked: false, id: 1 },
+  {
+    name: "Agnes Skinner",
+    imageLocation: AgnesSkinner,
+    wasClicked: false,
+    id: 2,
+  },
+  { name: "Apu", imageLocation: Apu, wasClicked: false, id: 3 },
+  { name: "Willie", imageLocation: Willie, wasClicked: false, id: 4 },
+  { name: "Smithers", imageLocation: Smithers, wasClicked: false, id: 5 },
 ];
 
 const charactersListEasyMode = [
   ...charactersListEasiestMode,
-  { name: "Seymour Skinner", imageLocation: SeymourSkinner, wasClicked: false },
-  { name: "Ralph", imageLocation: Ralph, wasClicked: false },
+  {
+    name: "Seymour Skinner",
+    imageLocation: SeymourSkinner,
+    wasClicked: false,
+    id: 6,
+  },
+  { name: "Ralph", imageLocation: Ralph, wasClicked: false, id: 7 },
 ];
 
 const charactersListMediumMode = [
   ...charactersListEasyMode,
-  { name: "Patty", imageLocation: Patty, wasClicked: false },
-  { name: "Ned", imageLocation: Ned, wasClicked: false },
-  { name: "Moe", imageLocation: Moe, wasClicked: false },
-  { name: "Milhouse", imageLocation: Milhouse, wasClicked: false },
-  { name: "Maude", imageLocation: Maude, wasClicked: false },
+  { name: "Patty", imageLocation: Patty, wasClicked: false, id: 8 },
+  { name: "Ned", imageLocation: Ned, wasClicked: false, id: 9 },
+  { name: "Moe", imageLocation: Moe, wasClicked: false, id: 10 },
+  { name: "Milhouse", imageLocation: Milhouse, wasClicked: false, id: 11 },
+  { name: "Maude", imageLocation: Maude, wasClicked: false, id: 12 },
 ];
 
 const charactersListHardMode = [
   ...charactersListMediumMode,
-  { name: "Marge", imageLocation: Marge, wasClicked: false },
-  { name: "Maggie", imageLocation: Maggie, wasClicked: false },
-  { name: "Lisa", imageLocation: Lisa, wasClicked: false },
-  { name: "Homer", imageLocation: Homer, wasClicked: false },
-  { name: "Grandpa", imageLocation: GrandpaSimpson, wasClicked: false },
+  { name: "Marge", imageLocation: Marge, wasClicked: false, id: 13 },
+  { name: "Maggie", imageLocation: Maggie, wasClicked: false, id: 14 },
+  { name: "Lisa", imageLocation: Lisa, wasClicked: false, id: 15 },
+  { name: "Homer", imageLocation: Homer, wasClicked: false, id: 16 },
+  { name: "Grandpa", imageLocation: GrandpaSimpson, wasClicked: false, id: 17 },
 ];
 
 const charactersListNightmareMode = [
   ...charactersListHardMode,
-  { name: "Mrs. Hoover", imageLocation: Elizabeth, wasClicked: false },
-  { name: "Edna", imageLocation: Edna, wasClicked: false },
-  { name: "Chief Wiggum", imageLocation: ChiefWiggum, wasClicked: false },
-  { name: "Mr. Burns", imageLocation: Burns, wasClicked: false },
-  { name: "Bob", imageLocation: Bob, wasClicked: false },
-  { name: "Barney", imageLocation: Barney, wasClicked: false },
+  { name: "Mrs. Hoover", imageLocation: Elizabeth, wasClicked: false, id: 18 },
+  { name: "Edna", imageLocation: Edna, wasClicked: false, id: 19 },
+  {
+    name: "Chief Wiggum",
+    imageLocation: ChiefWiggum,
+    wasClicked: false,
+    id: 20,
+  },
+  { name: "Mr. Burns", imageLocation: Burns, wasClicked: false, id: 21 },
+  { name: "Bob", imageLocation: Bob, wasClicked: false, id: 22 },
+  { name: "Barney", imageLocation: Barney, wasClicked: false, id: 23 },
 ];
 
 const charactersListImpossibleMode = [
   ...charactersListNightmareMode,
-  { name: "Carl", imageLocation: Carl, wasClicked: false },
-  { name: "Cat Lady", imageLocation: CatLady, wasClicked: false },
-  { name: "Cletus", imageLocation: Cletus, wasClicked: false },
-  { name: "Comic Book Guy", imageLocation: ComicBookGuy, wasClicked: false },
-  { name: "Lenny", imageLocation: Lenny, wasClicked: false },
-  { name: "Mayor", imageLocation: Mayor, wasClicked: false },
-  { name: "Nelson", imageLocation: Nelson, wasClicked: false },
-  { name: "Prof. Frink", imageLocation: ProfFrink, wasClicked: false },
+  { name: "Carl", imageLocation: Carl, wasClicked: false, id: 24 },
+  { name: "Cat Lady", imageLocation: CatLady, wasClicked: false, id: 25 },
+  { name: "Cletus", imageLocation: Cletus, wasClicked: false, id: 26 },
+  {
+    name: "Comic Book Guy",
+    imageLocation: ComicBookGuy,
+    wasClicked: false,
+    id: 27,
+  },
+  { name: "Lenny", imageLocation: Lenny, wasClicked: false, id: 28 },
+  { name: "Mayor", imageLocation: Mayor, wasClicked: false, id: 29 },
+  { name: "Nelson", imageLocation: Nelson, wasClicked: false, id: 30 },
+  { name: "Prof. Frink", imageLocation: ProfFrink, wasClicked: false, id: 31 },
 ];
 
 // Exporting lists
